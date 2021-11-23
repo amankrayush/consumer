@@ -1,0 +1,55 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "au.com.dius.pact" version "4.3.1"
+}
+
+group = 'com.learningms'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.5.2'
+
+
+	implementation 'io.projectreactor:reactor-core:3.4.12'
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation group: 'au.com.dius', name: 'pact-jvm-consumer-junit5', version: '4.0.10'
+	implementation group: 'au.com.dius', name: 'pact-jvm-consumer-java8', version: '4.0.10'
+	implementation group: 'au.com.dius', name: 'pact-jvm-provider-junit5', version: '4.0.10'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+	testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
+	testImplementation 'com.github.tomakehurst:wiremock:2.27.2'
+
+}
+
+test {
+	useJUnitPlatform()
+}
+
+/*pact {
+	publish {
+		pactBrokerUrl = 'http://localhost:9293/'
+	}
+}*/
+
+pact {
+	publish {
+		pactBrokerUrl = '***REMOVED***'
+		pactBrokerUsername = '***REMOVED***'
+		pactBrokerPassword = '***REMOVED***'
+		pactBrokerToken = '***REMOVED***'
+	}
+}
