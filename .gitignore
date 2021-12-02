@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+consumer.git/
+password.txt
+.DS_Store
