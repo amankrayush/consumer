@@ -30,7 +30,7 @@ public class SignInController {
 
     @GetMapping("/helloWorld")
     public String getHelloWorld(){
-        return "Hello-world-java";
+        return "Hello-world-java-bye";
     }
 
 }

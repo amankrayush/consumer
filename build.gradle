@@ -44,12 +44,12 @@ test {
 		pactBrokerUrl = 'http://localhost:9293/'
 	}
 }*/
-
+//
 pact {
 	publish {
-		pactBrokerUrl = '***REMOVED***'
-		pactBrokerUsername = '***REMOVED***'
-		pactBrokerPassword = '***REMOVED***'
-		pactBrokerToken = '***REMOVED***'
+		pactBrokerUrl = 'https://pdeshpande.pactflow.io'
+		pactBrokerUsername = 'pooja.deshpande@thoughtworks.com'
+		pactBrokerPassword = 'catalyst'
+		pactBrokerToken = 'W7TcLFaIApgUOYnCx66h4g'
 	}
 }
